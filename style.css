@@ -1,16 +1,142 @@
-.Center {
-    text-align: center
+html, body{
+    height:100%;
+    width:100%;
 }
 
-.Logo {
-    padding-top: 109px
+.container{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    justify-items: center;
+    grid-template-rows: 40px 1fr 40px;
+    grid-template-areas: 
+        "nav-bar"
+        "main"
+        "footer";
 }
 
-.Search_Box {
+.nav-bar{
+    grid-area: nav-bar;
+}
+
+.main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 190px;
+}
+
+.logo{
+    margin-bottom: 20px;
+    height: 92px;
+    width: 272px;
+}
+
+.search-bar{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search-bar-search{
+    height: 44px;
+    width: 582px;
+    order: 2;
+    border: 1px solid #dfe1e5;
     border-radius: 24px;
-    border-style: solid;
-    border-color: #dfe1e5;
+    padding-left: 50px;
+    font: 16px arial,sans-serif;
+}
+
+#search-bar-search:hover{
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    border-color: rgba(223,225,229,0);
+}
+
+#search-icon{
+    order: 1;
+    transform: translateX(35px);
+    fill: #9AA0A6;
+}
+
+#microphone-icon{
+    order: 3;
+    transform: translateX(-40px)
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.search-buttons{
+    margin-top: 10px;
+    padding-top: 18px;
+}
+
+#google-search{
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    color: #5F6368;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#lucky-search{
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    color: #5F6368;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: 10px;
+}
+
+.nav-bar{
+    width: 100%;
+    justify-self: center;
+}
+
+.nav-bar-top {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: arial,sans-serif;
+    font-size: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+}   
+
+.nav-bar-top li {
+    float: left;
+  }
+
+.nav-bar-top li a {
+    display: block;
+    color: #000;
+    opacity: 0.75;
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+  }
+
+#google-products {
+    background-image: url(//ssl.gstatic.com/gb/images/i2_2ec824b0.png);
+  }
 }
